@@ -1,0 +1,17 @@
+html * {
+    font-family: $primary-font;
+}
+ 
+ body {
+    overflow-x: hidden;
+    background-color: $black;
+    color: $white;
+    height: 100%;
+    z-index: 0;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+ }

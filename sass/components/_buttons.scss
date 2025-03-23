@@ -1,0 +1,43 @@
+// buttons
+.button {
+    margin-top: 2rem;
+    align-self: end;
+    background: transparent;
+    color: $white;
+    border: none;
+    font-size: 1rem;
+    line-height: 26px;
+    font-weight: bold;
+    letter-spacing: 2.29px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+    text-decoration: underline 2px $green;
+    text-underline-offset: 10px;
+
+    &:hover {
+        color: $green;
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+
+// cta and project links styling
+.cta, .project__link {
+    letter-spacing: 2.29px;
+    font-weight: 700;
+    line-height: 1.25rem;
+    cursor: pointer;
+    color: $white;
+    text-transform: uppercase;
+    transition: background 0.3s;
+    text-decoration: underline 2px $green;
+    text-underline-offset: 10px;
+    text-align: center;
+
+    // Hover styling
+    &:hover {
+        color: $green;
+        transform: scale(1.1);
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+}

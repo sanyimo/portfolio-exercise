@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Adam Keyes is a front-end developer passionate about accessible web apps. Check out my portfolio!">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Portfolio | Adam Keyes">
+    <meta property="og:description" content="Front-end developer passionate about accessibility and user experience.">
+    <meta property="og:image" content="./img/hero_image.png">
+    <meta property="og:url" content="https://mywebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Portfolio | Adam Keyes</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Logo -->
+      <picture class="header__logo">
+        <source srcset="./img/adamkeyes-logo.svg" type="image/svg+xml" media="(min-width: 1200px)">
+        <source srcset="./img/adamkeyes-logo.png" type="image/png" media="(min-width: 1200px)">
+        <img src="./img/adamkeyes-logo.png" alt="Logo of Adam Keyes, a front-end developer" loading="lazy" decoding="async">
+      </picture>
+
+      <!-- Navigation -->
+      <nav class="header__nav">
+        <ul>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src="./img/github.svg" alt="GitHub profile of Adam Keyes">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src="./img/frontendmentor.svg" alt="Frontend Mentor profile of Adam Keyes">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src="./img/linkedin.svg" alt="LinkedIn profile of Adam Keyes">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src="./img/twitter.svg" alt="X profile of Adam Keyes">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Nice to <span class="meet">meet</span> you! I'm <span class="name">Adam Keyes</span>.
+        </h1>
+        <p class="hero__description">Based in the UK, I’m a front-end developer passionate about building accessible web apps that users love.</p>
+        <a href="#contact-form" class="cta">Contact me</a>
+      </div>
+      <!-- Hero image -->
+      <picture>
+        <source srcset="./img/hero_image-desktop.webp" type="image/webp" media="(min-width: 1200px)">
+        <source srcset="./img/hero_image.webp" type="image/webp">
+        <source srcset="./img/hero_image-desktop.png" type="image/png" media="(min-width: 1200px)">
+        <img src="./img/hero_image.png" alt="Portrait of Adam Keyes, a front-end developer" loading="lazy" decoding="async">
+      </picture>
+    </section>
+    
+    <!-- Main  -->
+    <main class="main">
+      <!-- Skills section -->
+      <section class="skills">
+        <article>
+          <h2>HTML</h2>
+          <p>4 Years Experience</p>
+        </article>
+        <article>
+          <h2>CSS</h2>
+          <p>4 Years Experience</p>
+        </article>
+        <article>
+          <h2>JavaScript </h2>
+          <p>4 Years Experience</p>
+        </article>
+        <article>
+          <h2>Accessibility</h2>
+          <p>4 Years Experience</p>
+        </article>
+        <article>
+          <h2>React</h2>
+          <p>3 Years Experience</p>
+        </article>
+        <article>
+          <h2>Sass</h2>
+          <p>3 Years Experience</p>
+        </article>
+      </section>
+
+      <!-- Projects section -->
+      <section class="projects">
+        <div class="projects__title">
+          <h2>Projects</h2>
+          <a href="#contact-form" class="cta">Contact me</a>
+        </div>
+        <!-- Projects content --->
+        <div class="projects__grid">
+          <!-- Project 1 -->
+          <article class="project">
+            <picture>
+              <source srcset="./img/design-portfolio-desktop.webp" type="image/webp" media="(min-width: 1200px)">
+              <source srcset="./img/design-portfolio.webp" type="image/webp">
+              <source srcset="./img/design-portfolio-desktop.jpg" type="image/jpeg" media="(min-width: 1200px)">
+              <img src="./img/design-portfolio.jpg" alt="Preview of the Design Portfolio project" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="project__title">Design Portfolio</h3>
+            <div class="project__tech">
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="project__links">
+              <a href="#" class="project__link">View Project</a>
+              <a href="#" class="project__link">View Code</a>
+            </div>
+          </article>
+
+          <!-- Project 2 --> 
+          <article class="project">
+            <picture>
+              <source srcset="./img/elearning-landing-page-desktop.webp" type="image/webp" media="(min-width: 1200px)">
+              <source srcset="./img/elearning-landing-page.webp" type="image/webp">
+              <source srcset="./img/elearning-landing-page-desktop.jpg" type="image/jpeg" media="(min-width: 1200px)">
+              <img src="./img/elearning-landing-page.jpg" alt="Preview of the E-Learning Landing Page project" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="project__title">E-Learning Landing Page</h3>
+            <div class="project__tech">
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="project__links">
+              <a href="#" class="project__link">View Project</a>
+              <a href="#" class="project__link">View Code</a>
+            </div>
+          </article>
+      
+          <!-- Project 3 -->
+          <article class="project">
+            <picture>
+              <source srcset="./img/todo-web-app-desktop.webp" type="image/webp" media="(min-width: 1200px)">
+              <source srcset="./img/todo-web-app.webp" type="image/webp">
+              <source srcset="./img/todo-web-app-desktop.jpg" type="image/jpeg" media="(min-width: 1200px)">
+              <img src="./img/todo-web-app.jpg" alt="Preview of the TODO Web App project" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="project__title">TODO Web App</h3>
+            <div class="project__tech">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+            </div>
+            <div class="project__links">
+              <a href="#" class="project__link">View Project</a>
+              <a href="#" class="project__link">View Code</a>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project">
+            <picture>
+              <source srcset="./img/entertainment-web-app-desktop.webp" type="image/webp" media="(min-width: 1200px)">
+              <source srcset="./img/entertainment-web-app.webp" type="image/webp">
+              <source srcset="./img/entertainment-web-app-desktop.jpg" type="image/jpeg" media="(min-width: 1200px)">
+              <img src="./img/entertainment-web-app.jpg" alt="Preview of the TODO Web App project" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="project__title">Entertainment Web App</h3>
+            <div class="project__tech">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+            </div>
+            <div class="project__links">
+              <a href="#" class="project__link">View Project</a>
+              <a href="#" class="project__link">View Code</a>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project">
+            <picture>
+              <source srcset="./img/memory-game-desktop.webp" type="image/webp" media="(min-width: 1200px)">
+              <source srcset="./img/memory-game.webp" type="image/webp">
+              <source srcset="./img/memory-game-desktop.jpg" type="image/jpeg" media="(min-width: 1200px)">
+              <img src="./img/memory-game.jpg" alt="Preview of the Memory Game project" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="project__title">Memory Game</h3>
+            <div class="project__tech">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+            </div>
+            <div class="project__links">
+              <a href="#" class="project__link">View Project</a>
+              <a href="#" class="project__link">View Code</a>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project">
+            <picture>
+              <source srcset="./img/art-gallery-showcase-desktop.webp" type="image/webp" media="(min-width: 1200px)">
+              <source srcset="./img/art-gallery-showcase.webp" type="image/webp">
+              <source srcset="./img/art-gallery-showcase-desktop.jpg" type="image/jpeg" media="(min-width: 1200px)">
+              <img src="./img/art-gallery-showcase.jpg" alt="Preview of the Art Gallery Showcase project" loading="lazy"
+                decoding="async">
+            </picture>
+            <h3 class="project__title">Art Gallery Showcase</h3>
+            <div class="project__tech">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+            </div>
+            <div class="project__links">
+              <a href="#" class="project__link">View Project</a>
+              <a href="#" class="project__link">View Code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    
+      <!-- Contact -->
+      <section id="contact-form" class="contact">
+        <!-- Contact header -->
+        <div class="contact__header">
+          <h2 class="contact__title">Contact</h2>
+          <p class="contact__description">
+            I would love to hear about your project and how I could help.
+            Please fill in the form, and I’ll get back to you as soon as possible.
+          </p>
+        </div>
+        
+        <!-- Contact form -->
+        <form class="contact__form" id="contact-form">        
+          <label for="name" class="contact__label">Name</label>
+          <input type="text" id="name" class="contact__input" placeholder="Name" required pattern="^[A-Za-zÀ-ÿ\s'-]+$"
+            title="Only letters, spaces, hyphens, and apostrophes are allowed">
+          
+          <label for="email" class="contact__label">Email</label>
+          <input type="email" id="email" class="contact__input" placeholder="Email" required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Enter a valid email address (e.g., user@example.com)">
+          
+          <label for="message" class="contact__label">Message</label>
+          <textarea id="message" class="contact__textarea" placeholder="Message" required minlength="50"
+            maxlength="250"></textarea>          
+          <button type="submit" class="button">Send Message</button>         
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Footer logo -->
+      <picture class="footer__logo">
+        <source srcset="./img/adamkeyes-logo.svg" type="image/svg+xml" media="(min-width: 1200px)">
+        <source srcset="./img/adamkeyes-logo.png" type="image/png" media="(min-width: 1200px)">
+        <img src="./img/adamkeyes-logo.png" alt="Adam Keyes logo" loading="lazy" decoding="async">
+      </picture>
+
+      <!-- Footer navigation -->
+      <nav class="footer__nav">
+        <ul>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src="./img/github.svg" alt="GitHub profile of Adam Keyes">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src="./img/frontendmentor.svg" alt="Frontend Mentor profile of Adam Keyes">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src="./img/linkedin.svg" alt="LinkedIn profile of Adam Keyes">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src="./img/twitter.svg" alt="X profile of Adam Keyes">
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </footer>
+    <!-- Form validation -->
+    <script src="form-validation.js"></script>
+  </body>
+</html>

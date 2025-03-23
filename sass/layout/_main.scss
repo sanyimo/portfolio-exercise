@@ -1,0 +1,98 @@
+main {
+    // Background images and layout settings
+    background-image: linear-gradient(rgba($white, 0.8), rgba($white, .8)), url(../img/circles-right.png);
+    background-size: 92% 1px, 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 14.55%, calc(0% + 50vw) 13.4%;
+    z-index: 1;
+    position: relative;
+
+        // Adjust background for tablet view
+        @include breakpoint (tablet) {
+            background-image: url(../img/circles-right.png);
+            background-size: 25%;
+            background-position: right 10.8%;
+        }
+
+        @include breakpoint (desktopxl) {
+            background-image: url(../img/circles-big.png);
+            background-size: 22%;
+            background-position: 103% 9.2%;
+        }
+
+    //skills section 
+    .skills {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2.5rem 1rem;
+        position: relative;
+        
+        @include breakpoint (tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: start;
+            align-items: start;
+            padding: 52px 30px;
+        }
+
+        @include breakpoint (desktopxl) {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 60px 165px;
+            gap: 58px;
+        }
+
+        // White line at the top of the skills section
+        &::before {
+            position: absolute;
+            content: '';
+            background-color: $white;
+            opacity: 0.8;
+            width: 92%;
+            height: 1px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include breakpoint (desktopxl) {
+                width: 78%;
+            }
+        }
+
+        // Heading for each language/skill
+        h2 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            letter-spacing: -1px;
+            text-align: center;
+
+            @include breakpoint (tablet) {
+                justify-self: start;
+                font-size: 3rem;
+                line-height: 3.5rem;
+                letter-spacing: -1.5px;
+            }
+
+            @include breakpoint (desktopxl) {
+                margin-bottom: 14px;
+            }
+        }
+
+        // Description of experience/skills
+        p {
+            justify-self: center;
+            font-weight: 500;
+            line-height: 26px;
+
+            @include breakpoint (tablet) {
+                font-size: 18px;
+                line-height: 28px;
+                justify-self: start;
+            }
+        }
+    }
+
+    //CTA styling
+    .cta {
+        align-self: center;
+    }
+}

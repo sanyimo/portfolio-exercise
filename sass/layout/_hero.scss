@@ -1,0 +1,194 @@
+.hero {
+    // Background image setup with multiple layers
+    background-image: url(../img/circles.png), url(../img/Oval.svg), linear-gradient(to bottom, rgba($darkgrey, 0.2), rgba($darkgrey, 0.6));
+    background-size: 120%, 35%, 50% 50%;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 50vw) 7%, calc(100% + 17.5vw) 37%,  50% 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5.25rem;
+    position: relative;
+    
+    // Adjust layout for tablet and larger screens
+    @include breakpoint (tablet) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        background-image: url(../img/circles.png);
+        background-size: 57% 25%;
+        background-repeat: no-repeat;
+        background-position: calc(0% - 23vw) 0%;
+        }
+
+        @include breakpoint (desktopxl) {
+            background-size: 30% 20%;
+            background-position: 0% 9.5%;
+            padding-left: 165px;
+            padding-right: 165px;
+
+            // Overlay pseudo-element for additional styling
+            &::after {
+                content: '';
+                position: absolute;
+                background-image: url(../img/Oval.svg);
+                background-size: 18%;
+                background-repeat: no-repeat;
+                background-position: calc(100% + 9vw) 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 10;
+                pointer-events: none;
+        
+                @include breakpoint (desktopxl) {
+                    background-size: 9%;
+                    background-position: 57.7% 84%;
+                }
+            }
+        }
+        
+    
+    // Picture styling with positioning
+    picture {
+        order: -1;
+        position: relative;
+        z-index: 5;
+
+        @include breakpoint (tablet) {
+            min-width: 350px;
+            padding: 0;
+            order: 2;
+            display: flex;
+            justify-content: flex-end;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -150px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $darkgrey;
+                z-index: -1;
+            }
+        }
+
+        @include breakpoint (desktopxl) {
+            min-width: 445px;
+            height: 591px;
+            margin-top: 50px
+        }
+      
+        // Image adjustments
+        img {
+            margin: 3rem 6.25em 2.5rem;
+            
+            @include breakpoint(tablet) {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                justify-self: end;
+            }
+            @include breakpoint (desktopxl) {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    // Title section styling
+    &__title {
+        order: 2;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+        letter-spacing: -1.14px;
+        padding: 0 0.25rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 3;
+
+        // Adjustments for tablet and larger screens
+        @include breakpoint (tablet) {
+            font-size: 4.5rem;
+            line-height: 4.5rem;
+            letter-spacing: -2.05px;
+            text-align: left;
+            padding-left: 30px;
+            padding-right: 0;
+            justify-content: start;
+            width: 118%;
+            display: inline-block;
+            z-index: 10;
+
+            .meet::before, 
+            .name::before {
+                content: '';
+                display: block;                
+            }
+        }
+
+        @include breakpoint (desktopxl) {             
+            font-size: 5.5rem;
+            line-height: 5.5rem;
+            letter-spacing: -2.5px;
+            width: 110%;
+            margin-bottom: 43px;
+            padding-left: 0;
+            margin-top: -1.5rem;
+
+            .meet::before,
+            .name::before {
+                display: none;
+            }
+        }
+
+        span.name {
+            text-decoration: underline 4px $green;
+            text-underline-offset: 0.21em;
+        }
+    }
+
+    // Description section styling
+    &__description {
+        order: 3;
+        padding: 0 1rem;
+        line-height: 26px;
+        margin-bottom: 1.5rem;
+
+        @include breakpoint (tablet) {
+            text-align: left;
+            padding-left: 2rem;
+            padding-right: 0;
+            font-size: 18px;
+            line-height: 28px;
+            width: 107%;
+            z-index: 11;
+            position: relative;
+        }
+        @include breakpoint (desktopxl) {
+            padding-left: 0;
+            width: 65%;
+            margin-bottom: 66px;
+        }
+    }
+
+    // CTA section styling
+    .cta {
+        order: 4;
+        margin-top: 1rem;
+        text-align: center;
+
+        @include breakpoint (tablet) {
+            padding-left: 2rem;
+        }
+        
+        @include breakpoint (desktopxl) {
+            padding-left: 0;
+        }
+    }
+}

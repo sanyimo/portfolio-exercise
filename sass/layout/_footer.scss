@@ -1,0 +1,130 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $darkgrey;
+    padding-bottom: 3.75rem;
+    padding-top: 1rem;
+    position: relative;
+
+    // Adjustments for tablet screens
+    @include breakpoint(tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 30px 2.5rem;        
+    }
+
+    // Adjustments for desktop screens
+    @include breakpoint(desktopxl) {
+        padding: 47px 165px 92px;
+    }
+
+    // Horizontal line in the footer
+    &::before {
+            position: absolute;
+            content: '';
+            background-color: $white;
+            opacity: 0.8;
+            width: 92%;
+            height: 1px;
+            left: 4%;
+            right: 4%;
+            top: 0.9rem;
+
+            // Adjustments for tablet screens
+            @include breakpoint(tablet) {
+                top: 0;
+                width: 91%;
+                left: 4.5%;
+                right: 4.5%;
+            }
+
+            // Adjustments for desktop screens
+            @include breakpoint(desktopxl) {
+                width: 77%;
+                left: 11.5%;
+                right: 11.5%;
+            }
+        }
+
+    // Footer logo styling
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // Adjustments for tablet screens
+        @include breakpoint(tablet) {
+            justify-self: flex-start;
+            width: 172px;
+            height: auto;
+        }
+
+        // Adjustments for desktop screens
+        @include breakpoint(desktopxl) {
+            width: 172px;
+        }
+
+        // Footer logo image
+        img {
+            display: block;
+            margin-top: 2.5rem;
+
+            // Adjustments for tablet and larger screens
+            @include breakpoint(tablet) {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    }
+
+    // Footer navigation styling
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
+        padding: 1.25rem 1.06rem 0;
+        
+        // Adjustments for tablet screens
+        @include breakpoint(tablet) {
+            gap: 2rem;
+            padding: 0;
+        }
+
+        // Adjustments for desktop screens
+        @include breakpoint(desktopxl) {
+            gap: 2rem;
+        }
+        
+        // Using <ul> for navigation
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.6rem; // Gap between list items
+
+            // Adjustments for tablet screens
+            @include breakpoint(tablet) {
+                gap: 2rem;
+            }
+        }
+
+        // <li> styling for each social link
+        li {
+            display: inline;
+        }
+
+        //footer icon images
+        img {
+            width: 1.2rem;
+
+            @include breakpoint(tablet) {
+                width: 1.5rem;
+            }
+        }
+    }
+}

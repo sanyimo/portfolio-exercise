@@ -1,0 +1,148 @@
+.projects {
+    margin-top: 5rem;
+    position: relative;
+    
+    // Projects title
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 0 1rem;
+        margin-bottom: 0.5rem;
+
+        // Adjustments for tablet and larger screens
+        @include breakpoint (tablet) {    
+            padding: 0 30px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        @include breakpoint (desktopxl) {
+            padding: 0 165px;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 2.5rem;
+            letter-spacing: -1.14px;
+            
+            // Adjustments for tablet and larger screens
+            @include breakpoint (tablet) {
+                font-size: 4.5rem;
+                line-height: 4.5rem;
+                letter-spacing: -2.05px;
+            }
+
+            @include breakpoint (desktopxl) {    
+                font-size: 5.5rem;
+                line-height: 5.5rem;
+                letter-spacing: -2.05px;
+            }
+        }
+    }
+
+    // Grid of projects
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0  5rem;
+
+        // Adjustments for tablet and larger screens
+        @include breakpoint (tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 30px 30px 2.5rem;
+            gap: 22px;
+        }
+
+        @include breakpoint (desktopxl) {
+            padding-left: 165px;
+            padding-right: 165px;
+            gap: 30px;
+        }
+    }
+
+    // Project
+    .project {
+        padding: 1rem;
+        position: relative;
+
+        @include breakpoint (tablet) {
+            gap: 1.5rem;
+            padding: 0;
+            margin-bottom: 3.75rem;
+        }
+
+        @include breakpoint (desktopxl) {
+            margin: 0;
+        }
+
+        // Project image
+        picture img {
+            width: 100%;
+
+            @include breakpoint (desktopxl) {
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
+
+        // Project title
+        &__title {
+            margin: 1.25rem 0 07px;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            text-transform: uppercase;
+            line-height: 2rem;
+            font-weight: 700;
+        }
+
+        // Languages used  in the project
+        &__tech {
+            display: flex;
+            gap: 18px;
+            color: $white;
+            opacity: 0.8;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+
+        // Project links
+        &__links {
+            display: flex;
+            gap: 30px;
+            @include breakpoint (desktopxl) {
+                flex-direction: column;
+                gap: 48px;
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.2s ease-in-out 0.5s, visibility 0s 0.2s;
+            }
+        }
+
+        // Hover efect forthe projects on desktop
+        @include breakpoint(desktopxl) {
+            &:hover {
+                picture img {
+                    opacity: 0.3;
+                    cursor: pointer;
+                }
+
+                .project__links {
+                    opacity: 1; 
+                    visibility: visible; 
+                    transition: opacity 0.5s ease-in-out;    
+                }
+            }
+        }
+        
+    }
+}
+
